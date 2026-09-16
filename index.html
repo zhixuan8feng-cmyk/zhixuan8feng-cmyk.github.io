@@ -3,69 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhixuan Feng</title>
+    <title>Zhixuan Feng | Ph.D. Candidate in Economics</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            max-width: 650px;
-            margin: 80px auto;
-            padding: 0 24px;
-            line-height: 1.75;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
             color: #222;
+            max-width: 780px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+        header {
+            border-bottom: 2px solid #CC0000; /* NCSU Red */
+            padding-bottom: 20px;
+            margin-bottom: 35px;
         }
         h1 {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 0.3rem;
+            font-size: 2.2rem;
+            margin: 0 0 6px 0;
             color: #111;
         }
-        .subtitle {
-            color: #666;
-            font-size: 1.05rem;
-            margin-top: 0;
-            margin-bottom: 2rem;
+        .title-sub {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 12px;
         }
-        p {
-            font-size: 1.05rem;
-            margin: 1.2rem 0;
+        .contact-line {
+            font-size: 0.95rem;
+            color: #444;
         }
-        a {
-            color: #1a0dab;
+        .contact-line a {
+            color: #CC0000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-line a:hover {
             text-decoration: underline;
         }
-        a:hover {
-            color: #000;
+        section {
+            margin-bottom: 35px;
         }
-        .contact {
-            margin-top: 2.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #eee;
-            font-size: 0.95rem;
+        h2 {
+            font-size: 1.35rem;
+            color: #222;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 6px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin: 12px 0;
+            font-size: 1rem;
+        }
+        .paper-item {
+            margin-bottom: 20px;
+        }
+        .paper-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+        .coauthor {
             color: #555;
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+        .abstract {
+            font-size: 0.95rem;
+            color: #444;
+            margin-top: 4px;
+        }
+        ul {
+            margin: 8px 0 16px 20px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.85rem;
+            color: #888;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <h1>Zhixuan Feng</h1>
-    <div class="subtitle">Ph.D. Candidate in Economics | North Carolina State University</div>
+    <header>
+        <h1>Zhixuan Feng</h1>
+        <div class="title-sub">Ph.D. Candidate in Economics | North Carolina State University</div>
+        <div class="contact-line">
+            Department of Economics, North Carolina State University &bull; 
+            Email: <a href="mailto:zfeng9@ncsu.edu">zfeng9@ncsu.edu</a> &bull; 
+            <a href="Resume.pdf" target="_blank">[Download CV (PDF)]</a>
+        </div>
+    </header>
 
-    <p>
-        I am a Ph.D. candidate in Economics at North Carolina State University. I will be on the 2026–2027 academic job market.
-    </p>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a 5th-year Ph.D. candidate in the Department of Economics at North Carolina State University. 
+            I am on the <strong>2026–2027 academic job market</strong> and available for interviews.
+        </p>
+        <p>
+            My research lies in <strong>financial econometrics</strong>, <strong>high-frequency trading data</strong>, and <strong>time series analysis</strong>. 
+            Specifically, my dissertation develops regime-switching and block-constrained Hidden Markov Models for high-dimensional realized covariance matrices within Realized GARCH frameworks.
+        </p>
+    </section>
 
-    <p>
-        My research interests are primarily in <strong>financial econometrics</strong> and <strong>time series analysis</strong>.
-    </p>
+    <section id="research">
+        <h2>Research</h2>
+        
+        <div class="paper-item">
+            <div class="paper-title">High-Dimensional Covariance Dynamics & Latent State Inference (Job Market Paper)</div>
+            <div class="coauthor">with Denis Pelletier</div>
+            <div class="abstract">
+                This paper develops a two-stage Hidden Markov Model with a block-structure specification to capture structural shifts in return-volatility dynamics while alleviating the curse of dimensionality. Daily positive semi-definite covariance matrices are constructed using refreshing-time and multivariate realized kernels, with the Hamilton Filter and Louis Formula implemented for recursive state inference and robust parameter estimation.
+            </div>
+            <p style="margin-top: 6px;"><a href="#" style="color: #CC0000; font-weight: bold; font-size: 0.95rem;">[PDF Coming Soon]</a></p>
+        </div>
 
-    <p>
-        You can find my curriculum vitae here: <a href="Resume.pdf" target="_blank">[Curriculum Vitae (PDF)]</a>.
-    </p>
+        <div class="paper-item">
+            <div class="paper-title">Regime-Switching in Multivariate Realized GARCH: A Block-Constrained Hidden Markov Approach (Working Paper)</div>
+            <div class="coauthor">with Denis Pelletier</div>
+            <div class="abstract">
+                Investigates regime-dependent volatility transitions and multivariate density forecasting, establishing asymptotic properties and computational feasibility for large cross-sectional assets.
+            </div>
+            <p style="margin-top: 6px;"><a href="#" style="color: #CC0000; font-weight: bold; font-size: 0.95rem;">[PDF Coming Soon]</a></p>
+        </div>
+    </section>
 
-    <div class="contact">
-        Department of Economics, North Carolina State University<br>
-        Email: <a href="mailto:zfeng9@ncsu.edu">zfeng9@ncsu.edu</a>
-    </div>
+    <section id="teaching">
+        <h2>Teaching Experience</h2>
+        <p><strong>North Carolina State University</strong></p>
+        <ul>
+            <li><strong>Instructor of Record</strong>, <em>EC 202: Principles of Macroeconomics</em></li>
+            <li><strong>Teaching Assistant</strong>, <em>EC 201: Principles of Microeconomics</em></li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>Ph.D. in Economics</strong>, North Carolina State University (Expected May 2027)</li>
+            <li><strong>M.S. in Statistics</strong>, North Carolina State University (Expected May 2026)</li>
+            <li><strong>M.A. in Economics</strong>, North Carolina State University (2023)</li>
+            <li><strong>B.A. in Finance & B.E. in Electronic Information Engineering</strong>, University of Electronic Science and Technology of China (2021)</li>
+        </ul>
+    </section>
+
+    <footer>
+        &copy; 2026 Zhixuan Feng. Last updated: September 2026.
+    </footer>
 
 </body>
 </html>
