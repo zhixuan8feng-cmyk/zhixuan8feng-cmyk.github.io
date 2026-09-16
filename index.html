@@ -5,163 +5,237 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zhixuan Feng | Ph.D. Candidate in Economics</title>
     <style>
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
+        :root {
+            --primary-color: #2D5016; /* 类似参考网站的经典学术绿，或改成 #CC0000 (NCSU红) */
+            --text-color: #2b2b2b;
+            --link-color: #2D5016;
         }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.65;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        /* 顶部导航条 */
         header {
-            border-bottom: 2px solid #CC0000;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+            background-color: #333;
+            color: #fff;
+            padding: 12px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .header-text h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #222;
-        }
-        .header-text p {
-            margin: 5px 0 0 0;
-            font-size: 1.2em;
-            color: #666;
-        }
-        nav {
-            margin-top: 15px;
+        .nav-brand {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
         }
         nav a {
-            margin-right: 20px;
+            color: #eee;
             text-decoration: none;
-            color: #CC0000;
-            font-weight: bold;
+            margin-left: 24px;
+            font-size: 0.95rem;
         }
         nav a:hover {
+            color: #fff;
             text-decoration: underline;
         }
+        /* 主体容器 */
+        .container {
+            max-width: 860px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        /* 居中标题与联系方式 */
+        .hero-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        .hero-title h1 {
+            font-size: 2.4rem;
+            margin: 0 0 10px 0;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        .hero-title p {
+            margin: 4px 0;
+            font-size: 1.05rem;
+        }
+        .hero-title a {
+            color: var(--link-color);
+            font-weight: 600;
+        }
+        /* 经典两栏简介 */
+        .bio-section {
+            display: flex;
+            gap: 36px;
+            align-items: flex-start;
+            margin-bottom: 45px;
+        }
+        .bio-photo {
+            flex: 0 0 200px;
+        }
+        .bio-photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .bio-text {
+            flex: 1;
+            font-size: 1.02rem;
+        }
+        .bio-text p {
+            margin-top: 0;
+            margin-bottom: 14px;
+        }
+        .market-banner {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: 18px;
+        }
+        /* 章节分割 */
         section {
+            border-top: 1px solid #eaeaea;
+            padding-top: 30px;
             margin-bottom: 40px;
         }
         h2 {
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-            color: #444;
-        }
-        .research-item, .teaching-item, .education-item {
+            font-size: 1.5rem;
             margin-bottom: 20px;
+            color: #111;
         }
-        .title {
-            font-weight: bold;
-            font-size: 1.1em;
+        .paper-item {
+            margin-bottom: 28px;
         }
-        .contact-info {
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 5px;
+        .paper-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
         }
-        .coauthor {
+        .paper-author {
             color: #555;
-            font-style: italic;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+        .paper-abstract {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 8px;
+            text-align: justify;
+        }
+        .paper-links a {
+            color: var(--link-color);
+            font-weight: bold;
+            font-size: 0.95rem;
+            text-decoration: none;
+        }
+        .paper-links a:hover {
+            text-decoration: underline;
         }
         footer {
             text-align: center;
-            margin-top: 50px;
-            font-size: 0.9em;
+            padding: 30px 0;
+            font-size: 0.85rem;
             color: #888;
+            border-top: 1px solid #f0f0f0;
+        }
+        @media (max-width: 650px) {
+            .bio-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .bio-photo {
+                max-width: 180px;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- 顶部导航条 -->
     <header>
-        <div class="header-text">
-            <h1>Zhixuan Feng</h1>
-            <p>Ph.D. Candidate in Economics | North Carolina State University</p>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#research">Research</a>
-                <a href="#teaching">Teaching</a>
-                <a href="#experience">Experience</a>
-            </nav>
-        </div>
+        <a href="#about" class="nav-brand">Zhixuan Feng</a>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#teaching">Teaching</a>
+            <a href="Resume.pdf" target="_blank">CV</a>
+        </nav>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a Ph.D. candidate in the Department of Economics at North Carolina State University. I am currently on the 2026-2027 academic job market.</p>
+    <div class="container">
         
-        <p>My research primarily focuses on <strong>Financial Econometrics</strong>, <strong>High-Frequency Trading Data</strong>, and <strong>Time Series Analysis</strong>. My dissertation explores high-dimensional covariance dynamics and latent state inference.</p>
-        
-        <div class="education-item">
-            <strong>Education:</strong>
+        <!-- 头部居中信息 -->
+        <div class="hero-title" id="about">
+            <h1>Zhixuan Feng</h1>
+            <p>Ph.D. Candidate in Economics, North Carolina State University</p>
+            <p><a href="Resume.pdf" target="_blank">Download my CV</a></p>
+            <p>Email: <a href="mailto:zfeng9@ncsu.edu">zfeng9@ncsu.edu</a></p>
+        </div>
+
+        <!-- 两栏简介：左照片，右简介 -->
+        <div class="bio-section">
+            <div class="bio-photo">
+                <!-- 建议在仓库里上传一张 profile.jpg。没有图片前可先保留占位图 -->
+                <img src="profile.jpg" alt="Zhixuan Feng" onerror="this.src='https://via.placeholder.com/200x260?text=Photo';">
+            </div>
+            <div class="bio-text">
+                <p>I am a Ph.D. Candidate in Economics at North Carolina State University.</p>
+                
+                <p>My research focuses on <strong>Financial Econometrics</strong>, <strong>High-Frequency Data</strong>, and <strong>Time Series Econometrics</strong>. In particular, my dissertation investigates high-dimensional realized covariance dynamics, regime-switching structures, and latent state inference using Realized GARCH frameworks.</p>
+                
+                <p class="market-banner">I am on the 2026–2027 academic job market and available for interviews.</p>
+            </div>
+        </div>
+
+        <!-- 研究模块：只留你与 Denis 的两篇 Paper -->
+        <section id="research">
+            <h2>Research</h2>
+
+            <!-- Job Market Paper -->
+            <div class="paper-item">
+                <div class="paper-title">High-Dimensional Covariance Dynamics & Latent State Inference (Job Market Paper)</div>
+                <div class="paper-author">with Denis [Denis的全名]</div>
+                <div class="paper-abstract">
+                    <strong>Abstract:</strong> This paper develops a two-stage Hidden Markov Model with a block-structure specification to capture structural shifts in high-dimensional return-volatility dynamics while avoiding the curse of dimensionality. We construct daily positive semi-definite covariance matrices using refreshing-time and multivariate realized kernels, and implement the Hamilton Filter and Louis Formula for recursive state inference and robust parameter estimation within a Realized GARCH framework.
+                </div>
+                <div class="paper-links">
+                    <a href="jmp.pdf" target="_blank">[PDF]</a>
+                </div>
+            </div>
+
+            <!-- Working Paper 2 -->
+            <div class="paper-item">
+                <div class="paper-title">[第二篇论文的完整标题] (Working Paper)</div>
+                <div class="paper-author">with Denis [Denis的全名]</div>
+                <div class="paper-abstract">
+                    <strong>Abstract:</strong> [替换为第二篇论文的摘要，概括核心机制与主要实证/理论发现即可。]
+                </div>
+                <div class="paper-links">
+                    <a href="#" target="_blank">[PDF Coming Soon]</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 教学模块：简明扼要 -->
+        <section id="teaching">
+            <h2>Teaching</h2>
+            <p><strong>North Carolina State University</strong></p>
             <ul>
-                <li>Ph.D. in Economics, North Carolina State University (Expected May 2027)</li>
-                <li>M.S. in Statistics, North Carolina State University (Expected May 2026)</li>
-                <li>M.A. in Economics, North Carolina State University (2023)</li>
-                <li>B.A. in Finance & B.E. in Electronic Information Engineering, UESTC (2021)</li>
+                <li><strong>Instructor of Record</strong>: Principles of Macroeconomics (EC 202)</li>
+                <li><strong>Teaching Assistant</strong>: Principles of Microeconomics (EC 201)</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="contact-info">
-            <strong>Email:</strong> zfeng9@ncsu.edu <br>
-            <strong>Phone:</strong> (984) 867-9772 <br>
-            <strong>Department:</strong> Department of Economics, North Carolina State University<br>
-            <a href="Resume.pdf" target="_blank" style="color: #CC0000; font-weight: bold; display: inline-block; margin-top: 10px;">Download My CV (PDF)</a>
-        </div>
-    </section>
-
-    <section id="research">
-        <h2>Research</h2>
-        
-        <div class="research-item">
-            <div class="title">Job Market Paper: High-Dimensional Covariance Dynamics & Latent State Inference</div>
-            <div class="coauthor">Co-authored with Denis [替换为 Denis 的全名]</div>
-            <p><em>Abstract:</em> This paper constructs daily positive semi-definite covariance matrices using refreshing-time and multivariate realized kernels. It develops a two-stage Hidden Markov Model with a block-structure specification to capture structural shifts in return-volatility dynamics. The Hamilton Filter and Louis Formula are implemented for recursive state inference and robust parameter estimation within a Realized GARCH context.</p>
-            <a href="#" style="color: #CC0000;">[PDF Coming Soon]</a>
-        </div>
-
-        <div class="research-item">
-            <div class="title">Working Paper: [这里填入你和 Denis 的第二篇 Paper 的标题]</div>
-            <div class="coauthor">Co-authored with Denis [替换为 Denis 的全名]</div>
-            <p><em>Abstract:</em> [在这里填入第二篇论文的简短摘要。]</p>
-            <a href="#" style="color: #CC0000;">[PDF Coming Soon]</a>
-        </div>
-    </section>
-
-    <section id="teaching">
-        <h2>Teaching Experience</h2>
-        <div class="teaching-item">
-            <strong>North Carolina State University</strong>
-            <ul>
-                <li><strong>Instructor of Record</strong>, <em>EC 202: Principles of Macroeconomics</em> <br> Instructed undergraduate course covering GDP, inflation, unemployment, fiscal and monetary policy. Designed lecture materials and translated complex economic theories into accessible lectures.</li>
-                <li><strong>Teaching Assistant</strong>, <em>EC 201: Principles of Microeconomics</em> <br> Facilitated review sessions, managed course logistics, graded exams, and held office hours.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="experience">
-        <h2>Professional Experience & Skills</h2>
-        
-        <div class="teaching-item">
-            <strong>Industry Experience</strong>
-            <ul>
-                <li><strong>Analyst</strong>, <em>China Construction Bank (Financial Technology Sector)</em> - Applied big data techniques in financial technology and researched personalized marketing strategies using ETC user data (Summer 2019).</li>
-            </ul>
-        </div>
-
-        <p>
-            <strong>Programming & Frameworks:</strong> MATLAB (Expert), Python (NumPy, SciPy, Pandas, Scikit-Learn), R, SAS, Stata<br>
-            <strong>Specialties:</strong> Sequence Modeling, Causal Inference, Optimization, Time Series Analysis<br>
-            <strong>Software & Tools:</strong> LaTeX, Git, Remote Server Management
-        </p>
-    </section>
+    </div>
 
     <footer>
-        <p>&copy; 2026 Zhixuan Feng. Last updated: September 2026.</p>
+        &copy; 2026 Zhixuan Feng. Last updated: September 2026.
     </footer>
 
 </body>
